@@ -7,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivesComponent implements OnInit {
   isBordered: boolean = false;
-  showDiv: boolean = true;
+  hideDiv: boolean = false;
   constructor() { }
 
   onClick() {
     console.log('inside click...')
-    this.showDiv = !this.showDiv;
+    this.hideDiv = !this.hideDiv;
     this.isBordered = !this.isBordered;
   }
   

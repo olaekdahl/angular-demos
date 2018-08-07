@@ -1,0 +1,55 @@
+<div class="row">
+  <div class="container">
+    <!-- <form #userInfo="ngForm" (ngSubmit)="onSubmit(userInfo);" [ngFormOptions]="{ updateOn: 'submit' }">
+       -->
+    <form #userInfo="ngForm" (ngSubmit)="onSubmit(userInfo);">
+      <div class="form-group row">Form Valid: {{userInfo.form.valid}}</div>
+      <span *ngIf="userName.valid">is valid
+        </span>
+        <br/>
+        <span *ngIf="userName.dirty">is dirty
+        </span>
+        <br/>
+        <span *ngIf="userName.touched">was touched
+        </span>
+        <br/>
+      <div class="form-group row">
+        <div class="col-sm-1-12">
+          <p *ngIf="userName.invalid">Please enter a valid name</p>
+          <label for="name" class="col-sm-1-12 col-form-label" required>Name</label>
+          <input type="text" required maxlength="5" [(ngModel)]="name" class="form-control" name="name" id="name"
+            placeholder=""
+            #userName="ngModel">
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-1-12">
+          <div class="form-group">
+            <label for="country">Country</label>
+            <select [(ngModel)]="country" required class="form-control" name="country" id="country">
+              <option>USA</option>
+              <option>SWEDEN</option>
+              <option>INDIA</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="col-sm-1-12">
+          <div class="form-group">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="checkbox" [(ngModel)]="remember" class="form-check-input" name="remember" id="remember" value="checkedValue"> Remember me?
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <button [disabled]="!userInfo.form.valid" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

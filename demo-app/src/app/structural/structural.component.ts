@@ -9,7 +9,7 @@ import { del } from 'selenium-webdriver/http';
 })
 export class StructuralComponent implements OnInit {
   products: IProduct[];
-  switchProp:number = 1;
+  switchProp:number = 4;
   constructor() { }
 
   async ngOnInit() {
@@ -26,7 +26,12 @@ export class StructuralComponent implements OnInit {
       {
         productId: 2,
         productName: "Yellow Helmet"
+      },
+      {
+        productId: 3,
+        productName: "Red Helmet"
       }
+
     ]
   }
 }

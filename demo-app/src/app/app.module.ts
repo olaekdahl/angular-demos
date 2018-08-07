@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ImportantTextDirective } from './directives/important.text.directive';
 import { StructuralComponent } from './structural/structural.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { StructuralComponent } from './structural/structural.component';
     LoginComponent,
     DirectivesComponent,
     ImportantTextDirective,
-    StructuralComponent
+    StructuralComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
