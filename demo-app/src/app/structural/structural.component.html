@@ -1,0 +1,32 @@
+<div class="row" *ngIf="products else loading">
+  <table class="table table-striped col-md-5" *ngIf="products && products.length">
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.productId }}</td>
+        <td>{{ product.productName }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+      <div [ngSwitch]="switchProp">
+        <div *ngSwitchCase="1">case 1</div>
+        <div *ngSwitchCase="2">case 2</div>
+        <ng-container *ngSwitchCase="3">
+          <div>container 1</div>
+          <div>container 2</div>
+        </ng-container>
+        <div *ngSwitchDefault="">default case</div>
+      </div>
+    </div>
+</div>
+
+
+<ng-template #loading>
+    <div>Loading...</div>
+</ng-template>
