@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { UserModel } from './user';
 
 @Component({
-  selector: 'app-forms',
+  selector: 'app-forms-template',
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.css']
 })
-export class FormsComponent implements OnInit {
+export class FormsTemplateComponent implements OnInit {
   name: string;
   country: string;
   remember: boolean = true;
