@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { ImportantTextDirective } from './directives/important.text.directive';
-import { FancyTextComponent } from './fancy-text/fancy-text.component';
 import { StructuralComponent } from './structural/structural.component';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { StructuralComponent } from './structural/structural.component';
     LoginComponent,
     DirectivesComponent,
     ImportantTextDirective,
-    FancyTextComponent,
     StructuralComponent
   ],
   imports: [
