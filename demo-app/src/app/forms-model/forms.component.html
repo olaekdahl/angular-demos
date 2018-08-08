@@ -1,23 +1,44 @@
+<p>&nbsp;</p>
 <div class="row">
-      <div class="container">
-        <form [formGroup]="userInfo">
-          <div class="form-group row">
-            <label for="firstName" class="col-sm-1-12 col-form-label">First Name&nbsp;</label>
-            <div class="col-sm-1-12">
-              <input type="text" class="form-control" formControlName="firstName" id="firstName">
-            </div>
-          </div>
-          <div class="form-group row">
-              <label for="lastName" class="col-sm-1-12 col-form-label">Last Name&nbsp;</label>
-              <div class="col-sm-1-12">
-                <input type="text" class="form-control" formControlName="lastName" id="lastName">
-              </div>
-            </div>
-          <div class="form-group row">
-            <div class="offset-sm-2 col-sm-10">
-              <button type="submit" class="btn btn-primary" (click)="submitForm()">Submit</button>
-            </div>
-          </div>
-        </form>
+  <div class="container">
+    <span *ngIf="userInfo.controls.firstName.valid">is valid
+    </span>
+    <br/>
+    <span *ngIf="userInfo.controls.firstName.dirty">is dirty
+    </span>
+    <br/>
+    <span *ngIf="userInfo.controls.firstName.touched">was touched
+    </span>
+    <br/>
+    <span>The value of firstName is {{ userInfo.controls.firstName.value }}</span>
+    <br />
+    <span>The value of lastName is {{ userInfo.controls.lastName.value }}</span>
+    <br />
+    <form [formGroup]="userInfo">
+      <div class="form-group row">
+        <label for="firstName" class="col-sm-1-12 col-form-label">First Name&nbsp;</label>
+        <div class="col-sm-1-12">
+          <input type="text" class="form-control" formControlName="firstName" id="firstName">
+        </div>
       </div>
+      <div class="form-group row">
+        <label for="lastName" class="col-sm-1-12 col-form-label">Last Name&nbsp;</label>
+        <div class="col-sm-1-12">
+          <input type="text" class="form-control" formControlName="lastName" id="lastName">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="email" class="col-sm-1-12 col-form-label">Email&nbsp;</label>
+        <div class="col-sm-1-12">
+          <input type="text" class="form-control" formControlName="email" id="email">
+          <span *ngIf="userInfo.controls.email.valid">Email is valid</span>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <button type="submit" class="btn btn-primary" (click)="submitForm()">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
