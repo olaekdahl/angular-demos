@@ -1,32 +1,12 @@
-<form [formGroup]="userInfo">
-  First:
-  <input formControlName="first">
-  <br> Last :
-  <input formControlName="last">
-  <br>
-  <div formArrayName="addresses">
-    <!-- <p> -->
-      <div formGroupName="address">
-        <span>Address 1</span>
-        <br> Address:
-        <input formControlName="address">
-        <br> City:
-        <input formControlName="city" size=12> State:
-        <input formControlName="state" size=2> Zip:
-        <input formControlName="zip" size=5>
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup);">
+    <div formGroupName="addresses">
+      <div *ngFor="let address of addresses; let i = index">
+        <div formGroupName="{{'address-'+i}}">
+          <input type="text" formControlName="address"/>
+          <input type="text" formControlName="name"/>
+          <input type="text" formControlName="city"/>
+        </div>
       </div>
-    <!-- </p> -->
-    <!-- <p> -->
-      <div formGroupName="address">
-        <span>Address 2</span>
-        <br> Address:
-        <input formControlName="address">
-        <br> City:
-        <input formControlName="city" size=12> State:
-        <input formControlName="state" size=2> Zip:
-        <input formControlName="zip" size=5>
-      </div>
-    <!-- </p> -->
-  </div>
-  <input type=button value=submit (click)=onSubmit()>
-</form>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

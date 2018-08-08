@@ -1,3 +1,4 @@
+// https://stackoverflow.com/questions/47711544/angular-2-get-dynamic-formgroup-name
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { validateEmail } from './email.validator';
@@ -8,51 +9,40 @@ import { validateEmail } from './email.validator';
   styleUrls: ['./forms.component.css']
 })
 export class FormsModelComponent implements OnInit {
+  addresses = [
+    {
+      address: '123 Main',
+      name: 'Fred',
+      city: 'New York'
+    },
+    {
+      address: '45 Shady Tree',
+      name: 'Tim',
+      city: 'Los Angeles'
+    }
+  ];
 
-  userInfo: FormGroup;
-  formState: string;
-  constructor(private fb: FormBuilder) {
-    this.createForm();
+  formGroup: FormGroup;
+  constructor(private fb: FormBuilder) { }
+
+  ngOnInit() {
+    this.formGroup = new FormGroup({});
+    let addressGroup = new FormGroup({});
+
+    this.addresses.map((group, index) => {
+      const name = 'address-' + index.toString();
+      const formGroup = this.fb.group({
+        address: [group.address],
+        name: [group.name],
+        city: [group.city]
+      });
+      addressGroup.addControl(name, formGroup);
+    })
+
+    this.formGroup.addControl('addresses', addressGroup);
   }
 
-  createForm() {
-    // this.userInfo = this.fb.group({
-    //   first: new FormControl('Jim', []),
-    //   last: new FormControl('Doe', []),
-    //   addresses: this.fb.array([
-    //     : new FormGroup({
-    //       address: new FormControl('Main Street', []),
-    //       city: new FormControl('Newark', []),
-    //       state: new FormControl('NJ', []),
-    //       zip: new FormControl('07102', [])
-    //     }),
-    //     this.fb.group({
-    //       address: new FormControl('Main Street', []),
-    //       city: new FormControl('Newark', []),
-    //       state: new FormControl('NJ', []),
-    //       zip: new FormControl('07102', [])
-    //     })
-    //   ])
-    // });
+  onSubmit(formGroup) {
+    console.log(JSON.stringify(formGroup.value, null, 2));
   }
-
-  onSubmit() {
-    console.log(JSON.stringify(
-      this.userInfo.value, null, 2));
-  }
-
-  ngOnInit(): void {
-  }
-
-  // ngOnInit() {
-  //   this.userInfo = new FormGroup({
-  //     firstName: new FormControl('Jim', []),
-  //     lastName: new FormControl('Doe',[Validators.required]),
-  //     email: new FormControl('', [])
-  //     });
-  // }
-  // submitForm() {
-  //   console.log(this.userInfo.value);
-  // }
-
 }
