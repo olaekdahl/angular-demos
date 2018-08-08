@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
+import { AuthImpl } from '../AuthImpl';
 
 @Component({
   selector: 'app-login',
@@ -9,8 +10,8 @@ import { AuthenticationService } from '../authentication.service';
 export class LoginComponent implements OnInit {
 
   loggedIn: boolean = false;
-  constructor(private auth: AuthenticationService) { 
-    this.loggedIn = auth.login("admin", "pass1");
+  constructor(private auth: AuthImpl) { 
+    this.loggedIn = auth.login("admin", "pass");
   }
 
   ngOnInit() {
