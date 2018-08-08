@@ -1,0 +1,16 @@
+{
+    "first": "Jim",
+    "last": "Doe",
+    "addresses": [{
+        "address": "Main Street",
+        "city": "Newark",
+        "state": "NJ",
+        "zip": "07102"
+    },
+    {
+        "address": "Main Street",
+        "city": "Newark",
+        "state": "NJ",
+        "zip": "07102"
+    }]
+}

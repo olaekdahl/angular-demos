@@ -1,0 +1,14 @@
+[
+    {
+        "productId": 1,
+        "productName": "Blue Bike"
+    },
+    {
+        "productId": 2,
+        "productName": "Yellow Helmet"
+    },
+    {
+        "productId": 3,
+        "productName": "Red Helmet"
+    }
+]

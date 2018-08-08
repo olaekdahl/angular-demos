@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { validateEmail } from './email.validator';
 
 @Component({
@@ -12,29 +12,47 @@ export class FormsModelComponent implements OnInit {
   userInfo: FormGroup;
   formState: string;
   constructor(private fb: FormBuilder) {
-    //this.createForm();
+    this.createForm();
   }
 
   createForm() {
-    this.userInfo = this.fb.group({
-      firstName: new FormControl('John'), // <--- the FormControl called "first"
-      lastName: ['Doe', Validators.required], // parameter array
-      email: ['', validateEmail]
-    });
+    // this.userInfo = this.fb.group({
+    //   first: new FormControl('Jim', []),
+    //   last: new FormControl('Doe', []),
+    //   addresses: this.fb.array([
+    //     : new FormGroup({
+    //       address: new FormControl('Main Street', []),
+    //       city: new FormControl('Newark', []),
+    //       state: new FormControl('NJ', []),
+    //       zip: new FormControl('07102', [])
+    //     }),
+    //     this.fb.group({
+    //       address: new FormControl('Main Street', []),
+    //       city: new FormControl('Newark', []),
+    //       state: new FormControl('NJ', []),
+    //       zip: new FormControl('07102', [])
+    //     })
+    //   ])
+    // });
   }
 
-  // ngOnInit(): void {
+  onSubmit() {
+    console.log(JSON.stringify(
+      this.userInfo.value, null, 2));
+  }
+
+  ngOnInit(): void {
+  }
+
+  // ngOnInit() {
+  //   this.userInfo = new FormGroup({
+  //     firstName: new FormControl('Jim', []),
+  //     lastName: new FormControl('Doe',[Validators.required]),
+  //     email: new FormControl('', [])
+  //     });
   // }
-
-  ngOnInit() {
-    this.userInfo = new FormGroup({
-      firstName: new FormControl('Jim', []),
-      lastName: new FormControl('Doe',[Validators.required]),
-      email: new FormControl('', [])
-      });
-  }
-  submitForm() {
-    console.log(this.userInfo.value);
-  }
+  // submitForm() {
+  //   console.log(this.userInfo.value);
+  // }
 
 }
