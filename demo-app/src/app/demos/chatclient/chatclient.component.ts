@@ -9,16 +9,19 @@ import { ChatService } from '../chat.service';
 })
 export class ChatclientComponent implements OnInit{
   title = 'app';
-
+  message: string;
   constructor(private chat: ChatService){ }
 
   ngOnInit() {
     this.chat.messages.subscribe(msg => {
+      this.message = msg,
       console.log(msg);
     })
   }
 
-  sendMessage(msg: string) {
-    this.chat.sendMsg(msg);
+  onSubmit(form) {
+    console.log("Submitted:" +
+      JSON.stringify(form.form.value, null, 2));
+      this.chat.sendMsg(form.form.value);
   }
 }
