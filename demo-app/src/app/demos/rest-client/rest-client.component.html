@@ -1,3 +1,7 @@
 <p>
   rest-client works!
 </p>
+<form #postData="ngForm" (ngSubmit)="onSubmit(postData);">
+  <input type="text" [(ngModel)]="data" class="form-control" name="data" id="data">
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

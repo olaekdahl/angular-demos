@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -8,10 +8,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailComponent implements OnInit {
   pid: string;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private activeRoute: ActivatedRoute, private router: Router) { }
+
+
+  onClick(){
+    console.log('inside onClick...');
+    this.router.navigate(['/welcome'])
+  }
 
   ngOnInit() {
-    this.pid = this.route.snapshot.paramMap.get('pid');
+    this.pid = this.activeRoute.snapshot.paramMap.get('pid');
   }
 
 }

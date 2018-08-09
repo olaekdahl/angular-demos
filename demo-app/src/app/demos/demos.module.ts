@@ -14,6 +14,8 @@ import { PopularPipe } from './popular.pipe';
 import { DetailComponent } from './detail/detail.component';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { RestClientComponent } from './rest-client/rest-client.component';
+import { ChatclientComponent } from './chatclient/chatclient.component';
+import { FooComponent } from './foo/foo.component';
 
 @NgModule({
   imports: [
@@ -33,7 +35,9 @@ import { RestClientComponent } from './rest-client/rest-client.component';
     PipesComponent,
     PopularPipe,
     DetailComponent,
-    RestClientComponent
+    RestClientComponent,
+    ChatclientComponent,
+    FooComponent
   ],
   exports: [
     LoginComponent,
@@ -46,7 +50,8 @@ import { RestClientComponent } from './rest-client/rest-client.component';
     PipesComponent,
     PopularPipe,
     DetailComponent,
-    RestClientComponent
+    RestClientComponent,
+    ChatclientComponent
   ]
 })
 export class DemosModule { }

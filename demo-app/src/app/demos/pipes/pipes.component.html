@@ -12,7 +12,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let product of products">
-        <td><a href="#" [routerLink]="['/pipes', product.productId]">{{ product.productId }}</a></td>
+        <td><a href="#" [routerLink]="['/products', product.productId]">{{ product.productId }}</a></td>
         <td>{{ product.productName | lowercase }}</td>
         <!-- code | symbol | symbol-narrow -->
         <td>{{ product.price | currency:"USD":"symbol":"1.2-2" }}</td>

@@ -11,8 +11,8 @@ import { DetailComponent } from '../demos/detail/detail.component';
     RouterModule.forRoot([
       {path: '', component: WelcomeComponent},
       {path: 'welcome', component: WelcomeComponent},
-      {path: 'pipes', component: PipesComponent},
-      {path: 'pipes/:pid', component: DetailComponent}
+      {path: 'products', component: PipesComponent},
+      {path: 'products/:pid', component: DetailComponent}
     ])
   ],
   exports: [RouterModule],

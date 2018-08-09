@@ -1,7 +1,12 @@
 {
-	"/feeds/1019/*":{
-		"target": "http://localhost:4200",
-		"secure": false,
-		"logLevel": "debug"
+	"/feeds/*": {
+	   "target":  {
+		 "host": "https://www.npr.org",
+		 "protocol": "https:",
+		 "port": 443
+	   },
+	   "secure": true,
+	   "changeOrigin": true,
+	   "logLevel": "info"
 	}
-}
+  }
