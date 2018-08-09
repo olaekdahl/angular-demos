@@ -13,6 +13,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { PopularPipe } from './popular.pipe';
 import { DetailComponent } from './detail/detail.component';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
+import { RestClientComponent } from './rest-client/rest-client.component';
 
 @NgModule({
   imports: [
@@ -31,7 +32,8 @@ import { AppRoutingModule } from '../app-routing/app-routing.module';
     DiDemoComponent,
     PipesComponent,
     PopularPipe,
-    DetailComponent
+    DetailComponent,
+    RestClientComponent
   ],
   exports: [
     LoginComponent,
@@ -43,7 +45,8 @@ import { AppRoutingModule } from '../app-routing/app-routing.module';
     DiDemoComponent,
     PipesComponent,
     PopularPipe,
-    DetailComponent
+    DetailComponent,
+    RestClientComponent
   ]
 })
 export class DemosModule { }

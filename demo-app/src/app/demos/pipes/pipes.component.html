@@ -15,10 +15,10 @@
         <td><a href="#" [routerLink]="['/pipes', product.productId]">{{ product.productId }}</a></td>
         <td>{{ product.productName | lowercase }}</td>
         <!-- code | symbol | symbol-narrow -->
-        <td>{{ product.price | currency:"EUR":"symbol":"1.2-2" }}</td>
+        <td>{{ product.price | currency:"USD":"symbol":"1.2-2" }}</td>
         <!-- <td>{{ product.stockDate | date:"MM-dd-yyyy" }}</td> -->
-        <td>{{ product.stockDate | date:"full" }}</td>
-        <td><div [innerHtml]="product.popular | popular"></div></td>
+        <td>{{ product.stockDate | date:"MM-dd-yyyy" }}</td>
+        <td><div [innerHtml]="product.popular | popular:product.productName"></div></td>
       </tr>
     </tbody>
   </table>

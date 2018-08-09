@@ -16,7 +16,7 @@ import { AuthImpl } from "./auth/AuthImpl";
     AuthModule,
     ShoppingModule
   ],
-  providers: [{provide: AuthImpl, useClass: AuthenticationService}],
+  providers: [{provide: AuthImpl, useClass: AuthenticationServiceUnit}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
