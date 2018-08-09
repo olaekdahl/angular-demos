@@ -20,17 +20,26 @@ export class StructuralComponent implements OnInit {
   getProducts(): IProduct[] {
     return [
       {
-        productId: 1,
-        productName: "Blue Bike"
-      },
-      {
-        productId: 2,
-        productName: "Yellow Helmet"
-      },
-      {
-        productId: 3,
-        productName: "Red Helmet"
-      }
+        "productId": 1,
+        "productName": "Blue Bike",
+        "price": 99.99,
+        "stockDate": new Date(1310669017000),
+        "popular": true
+    },
+    {
+        "productId": 2,
+        "productName": "Yellow Helmet",
+        "price": 29.99,
+        "stockDate": new Date(1310669017000),
+        "popular": true
+    },
+    {
+        "productId": 3,
+        "productName": "Red Helmet",
+        "price": 19.99,
+        "stockDate": new Date(1310669017000),
+        "popular": true
+    }
 
     ]
   }

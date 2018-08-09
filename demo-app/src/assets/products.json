@@ -1,14 +1,23 @@
 [
     {
         "productId": 1,
-        "productName": "Blue Bike"
+        "productName": "Blue Bike",
+        "price": 99.99,
+        "stockDate": "1/1/2018",
+        "popular": true
     },
     {
         "productId": 2,
-        "productName": "Yellow Helmet"
+        "productName": "Yellow Helmet",
+        "price": 29.99,
+        "stockDate": "1/1/2018",
+        "popular": false
     },
     {
         "productId": 3,
-        "productName": "Red Helmet"
+        "productName": "Red Helmet",
+        "price": 19.99,
+        "stockDate": "1/1/2018",
+        "popular": true
     }
 ]

@@ -9,12 +9,17 @@ import { FormsModelComponent } from './forms-model/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductsService } from './products.service';
 import { DiDemoComponent } from './di-demo/di-demo.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { PopularPipe } from './popular.pipe';
+import { DetailComponent } from './detail/detail.component';
+import { AppRoutingModule } from '../app-routing/app-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   declarations: [
     LoginComponent,
@@ -23,7 +28,10 @@ import { DiDemoComponent } from './di-demo/di-demo.component';
     StructuralComponent,
     FormsTemplateComponent,
     FormsModelComponent,
-    DiDemoComponent
+    DiDemoComponent,
+    PipesComponent,
+    PopularPipe,
+    DetailComponent
   ],
   exports: [
     LoginComponent,
@@ -32,7 +40,10 @@ import { DiDemoComponent } from './di-demo/di-demo.component';
     StructuralComponent,
     FormsTemplateComponent,
     FormsModelComponent,
-    DiDemoComponent
+    DiDemoComponent,
+    PipesComponent,
+    PopularPipe,
+    DetailComponent
   ]
 })
 export class DemosModule { }
