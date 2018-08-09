@@ -1,1 +1,3 @@
 # angular-demos
+
+Add  (window as any).global = window to polyfill.ts on line 64 to get socket.io to work...
