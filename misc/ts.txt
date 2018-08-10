@@ -1,0 +1,64 @@
+node --version
+npm --version
+npm install -g @angular/cli
+ng --version
+
+npm init
+npm install typescript
+
+npm run tsc[w]
+node ./out/demo.js
+
+"tsc": "./node_modules/.bin/tsc",
+"tscw": "./node_modules/.bin/tsc --w"
+
+var age:number = 10
+console.log(`the value of age is ${age}`);
+
+var numbers:number[] = [1,2,3];
+
+for (var num of numbers) {
+    console.log(num);
+}
+
+numbers.forEach(element => {
+    console.log(`the value of x is ${element}`);
+});
+
+function printPerson(name:string, age:number) {
+	console.log(`Name: ${name} age: ${age}`)
+}
+-----------------------------------------------------------
+class Person {
+    name: string;
+    age: number;
+    id: number;
+    constructor(id: number) {
+        this.id = id
+    }
+    printDetails() {
+        console.log(`Title: ${this.name}`)
+        console.log(`ID: ${this.id}`)
+        console.log(`Age: ${this.age}`)
+    }
+}
+class Student extends Person {
+    units: number;
+    constructor(id: number, units: number) {
+        super(id);
+        this.units = units
+    }
+    printDetails() {
+        super.printDetails()
+        console.log(`Duration: ${this.units}`)
+    }
+}
+
+function test(p: Person) {
+    p.printDetails()
+}
+
+var p = new Student(1, 8)
+p.name = "Bob"
+p.age = 21;
+test(p)

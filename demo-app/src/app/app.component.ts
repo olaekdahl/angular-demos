@@ -26,6 +26,7 @@ export class AppComponent {
   msgFromChild: string;
   btn_state: string = 'active';
   toggle() {
+    //debugger;
     this.btn_state =
       (this.btn_state === 'active') ? 'inactive' : 'active';
   }
