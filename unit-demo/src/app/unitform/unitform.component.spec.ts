@@ -1,3 +1,5 @@
+// https://github.com/SantiagoGdaR/angular4-unit-test
+
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { BrowserModule, By } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -25,23 +27,32 @@ describe('UnitformComponent', () => {
       fixture = TestBed.createComponent(UnitformComponent);
 
       comp = fixture.componentInstance; // UnitformComponent test instance
-      // query for the title <h1> by CSS element selector
-      de = fixture.debugElement.query(By.css('form'));
-      el = de.nativeElement;
     });
   }));
 
  it(`form should be invalid`, async(() => {
-    comp.contactForm.controls['email'].setValue('');
-    comp.contactForm.controls['name'].setValue('');
-    comp.contactForm.controls['text'].setValue('');
+    comp.contactForm.controls['email'].setValue('aa');
+    comp.contactForm.controls['name'].setValue('a');
+    comp.contactForm.controls['text'].setValue('a');
     expect(comp.contactForm.valid).toBeFalsy();
   }));
 
   it(`form should be valid`, async(() => {
-    comp.contactForm.controls['email'].setValue('asd@asd.com');
+    comp.contactForm.controls['email'].setValue('asd@test.com');
     comp.contactForm.controls['name'].setValue('aada');
     comp.contactForm.controls['text'].setValue('text');
     expect(comp.contactForm.valid).toBeTruthy();
   }));
+
+  // it(`should call the onSubmit method`, async(() => {
+  //   spyOn(comp, 'onSubmit');
+  //   // let button : DebugElement =
+  //   //   fixture.debugElement.query(By.css("button"));
+
+  //   // button.triggerEventHandler("onSubmit", null);
+  //   // fixture.detectChanges();
+  //   el = fixture.debugElement.query(By.css('button')).nativeElement;
+  //   el.click();
+  //   expect(comp.onSubmit).toHaveBeenCalled();
+  // }));
 });

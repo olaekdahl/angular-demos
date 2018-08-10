@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class BlogserviceService {
 
   constructor() { }
+
+  getBlog(): string {
+    return 'blah blah blah...';
+  }
 }

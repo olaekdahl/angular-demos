@@ -1,14 +1,18 @@
-import { Component, OnInit, LOCALE_ID } from '@angular/core';
+import { Component, OnInit, LOCALE_ID, HostBinding } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { IProduct } from '../structural/product';
+import { Animations } from '../../animations';
 
 @Component({
   selector: 'app-pipes',
   templateUrl: './pipes.component.html',
-  styleUrls: ['./pipes.component.css']
+  styleUrls: ['./pipes.component.css'],
+  animations: [Animations.page]
 })
 export class PipesComponent implements OnInit {
-
+  @HostBinding('@routeAnimation')
+  anyProperty = 'anything';
+  
   products: IProduct[];
   
   private _filter: string;

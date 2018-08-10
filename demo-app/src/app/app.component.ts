@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 import { style, animate, transition, state, trigger } from '@angular/animations';
+import { Animations } from './animations'
 
 @Component({
   selector: 'app-root',
@@ -12,12 +13,15 @@ import { style, animate, transition, state, trigger } from '@angular/animations'
     trigger('buttontrigger', [
       state('active', style({  'background-color': 'green' })),
       state('inactive', style({ 'background-color': 'red' })),
-      transition('active => inactive', animate('400ms')),
-      transition('inactive => active', animate('400ms'))
-    ])
+      transition('active => inactive', animate('2000ms')),
+      transition('inactive => active', animate('2000ms'))
+      
+    ]),
+    Animations.page
   ]
 })
 export class AppComponent {
+
   title = 'Data value from parent...';
   msgFromChild: string;
   btn_state: string = 'active';

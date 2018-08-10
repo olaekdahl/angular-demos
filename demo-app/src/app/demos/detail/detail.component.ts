@@ -1,12 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Animations } from '../../animations';
 
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
-  styleUrls: ['./detail.component.css']
+  styleUrls: ['./detail.component.css'],
+  animations: [Animations.page]
 })
 export class DetailComponent implements OnInit {
+  @HostBinding('@routeAnimation')
+  anyProperty = 'anything';
   pid: string;
   constructor(private activeRoute: ActivatedRoute, private router: Router) { }
 

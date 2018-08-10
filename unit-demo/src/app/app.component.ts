@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'unit-demo';
+  foo(value: number) {
+    return value;
+  }
+
 }
