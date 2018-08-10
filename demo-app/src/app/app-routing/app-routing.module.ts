@@ -4,6 +4,7 @@ import { RouterModule, Router } from '@angular/router'
 import { WelcomeComponent } from '../welcome/welcome.component';
 import { PipesComponent } from '../demos/pipes/pipes.component';
 import { DetailComponent } from '../demos/detail/detail.component';
+import { ProuctDetailGuard } from './prouct-detail.guard';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import { DetailComponent } from '../demos/detail/detail.component';
       {path: '', component: WelcomeComponent},
       {path: 'welcome', component: WelcomeComponent},
       {path: 'products', component: PipesComponent},
-      {path: 'products/:pid', component: DetailComponent},
+      {path: 'products/:pid', canActivate: [ProuctDetailGuard], component: DetailComponent},
       //{path: 'checkout', loadChildren:"src/app/checkout/checkout.module#CheckoutModule"}
     ])
   ],
