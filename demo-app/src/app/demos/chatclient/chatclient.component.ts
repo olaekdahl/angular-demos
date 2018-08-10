@@ -9,6 +9,7 @@ import { ChatService } from '../chat.service';
 })
 export class ChatclientComponent implements OnInit{
   title = 'app';
+  data;
   message: string;
   constructor(private chat: ChatService){ }
 

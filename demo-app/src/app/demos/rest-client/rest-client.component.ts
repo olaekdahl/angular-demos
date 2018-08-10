@@ -17,7 +17,7 @@ export class RestClientComponent implements OnInit {
                                  console.log(data.url),
                                  console.log(data.body)));
   }
-
+  data;
   onSubmit(form) {
     console.log("Submitted:" +
       JSON.stringify(form.form.value, null, 2));

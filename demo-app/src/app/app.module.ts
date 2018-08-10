@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HttpbasicComponent } from './httpbasic/httpbasic.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { CheckoutModule } from './checkout/checkout.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     DemosModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CheckoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

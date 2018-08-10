@@ -9,7 +9,7 @@ import { IProduct } from '../structural/product';
 })
 export class DiDemoComponent implements OnInit {
   products: IProduct[];
-  
+  filter: string;
   //filteredProducts: IProduct[] = this.filter ? this.filterData(this.filter) : this.products;
   errorMsg: string;
   constructor(private ps: ProductsService) { 

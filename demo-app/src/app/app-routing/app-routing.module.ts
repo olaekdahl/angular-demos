@@ -12,7 +12,8 @@ import { DetailComponent } from '../demos/detail/detail.component';
       {path: '', component: WelcomeComponent},
       {path: 'welcome', component: WelcomeComponent},
       {path: 'products', component: PipesComponent},
-      {path: 'products/:pid', component: DetailComponent}
+      {path: 'products/:pid', component: DetailComponent},
+      //{path: 'checkout', loadChildren:"src/app/checkout/checkout.module#CheckoutModule"}
     ])
   ],
   exports: [RouterModule],
