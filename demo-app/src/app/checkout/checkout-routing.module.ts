@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CheckoutComponent } from './checkout/checkout.component';
 
 const routes: Routes = [
-  {path: "checkout", component: CheckoutComponent}
+  {path: "lazy", component: CheckoutComponent}
 ];
 
 @NgModule({

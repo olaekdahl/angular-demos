@@ -14,7 +14,7 @@ import { ProuctDetailGuard } from './prouct-detail.guard';
       {path: 'welcome', component: WelcomeComponent},
       {path: 'products', component: PipesComponent},
       {path: 'products/:pid', canActivate: [ProuctDetailGuard], component: DetailComponent},
-      //{path: 'checkout', loadChildren:"src/app/checkout/checkout.module#CheckoutModule"}
+      {path: 'checkout', loadChildren:"src/app/checkout/checkout.module#CheckoutModule"}
     ])
   ],
   exports: [RouterModule],

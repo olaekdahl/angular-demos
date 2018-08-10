@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import * as d from './demos';
 import { DemosModule } from './demos/demos.module';
@@ -29,7 +30,8 @@ import { CheckoutModule } from './checkout/checkout.module';
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    CheckoutModule
+    //CheckoutModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,14 +9,35 @@
     <!-- <app-di-demo></app-di-demo> -->
     <!-- <app-httpbasic></app-httpbasic> -->
     <!-- <app-pipes></app-pipes> -->
-    
 
-    <a [routerLink]="['/welcome']" routerLinkActive="active">Home</a> &nbsp;&nbsp; 
-    <a [routerLink]="['/products']" routerLinkActive="active">Products</a>&nbsp;&nbsp; 
-    <a [routerLink]="['/checkout']" routerLinkActive="active">Checkout</a><br>
-    <router-outlet></router-outlet>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+        <a class="navbar-brand">Demo App</a>
+        <ul class="nav nav-pills">
+            <li>
+                <a class="nav-link" [routerLink]="['/welcome']" routerLinkActive="active">Home</a>
+            </li>
+            <li>
+                <a class="nav-link" [routerLink]="['/products']" routerLinkActive="active">Products</a>
+            </li>
+            <li>
+                <a class="nav-link"  [routerLink]="['/checkout/lazy']" routerLinkActive="active">Checkout</a>
+            </li>
+        </ul>
+    </nav>
+    <p></p>
+    <div class="card">
+        <div class="card-header">
+            Test
+        </div>
+        <div class="card-body">
+            <router-outlet></router-outlet>
+        </div>
+        <div class="card-body">
+            Acme Corp
+        </div>
+    </div>
     <!-- <footer>This is a footer</footer> -->
-
+    <!-- <input (click)="toggle()" type=button value="I'm a button" [@buttontrigger]='btn_state' style="font-size : 20px; width: 100%; height: 100px;" /> -->
     <!-- <app-rest-client></app-rest-client> -->
     <!-- <app-chatclient></app-chatclient> -->
 
