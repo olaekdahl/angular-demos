@@ -1,0 +1,20 @@
+<script type="text/javascript">
+    function socketDemo() {
+        var socket = new WebSocket('ws://echo.websocket.org/');
+        socket.onopen = function (event) {
+            // Send an initial message
+            socket.send('start sending...');
+            // Listen for messages
+            socket.onmessage = function (event) {
+                // do something with
+                // event data
+                console.log(`echo: ${event.data}`);
+            };
+            // respond to disconnect
+            socket.onclose = function (event) {
+                console.log('ws disconnected');
+            };
+        };
+    }
+    window.onload = socketDemo;
+</script>
