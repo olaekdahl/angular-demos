@@ -11,11 +11,11 @@ export class ProductsService {
   url = '/assets/products.json'
   constructor(private http: HttpClient) { }
 
-  getProducts(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(this.url);
-  }
+  // getProducts(): Observable<IProduct[]> {
+  //   return this.http.get<IProduct[]>(this.url);
+  // }
 
-  xgetProducts(): IProduct[] {
+  getProducts(): IProduct[] {
     return [
       {
         "productId": 1,

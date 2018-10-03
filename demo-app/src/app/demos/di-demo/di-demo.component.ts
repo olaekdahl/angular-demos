@@ -13,11 +13,11 @@ export class DiDemoComponent implements OnInit {
   //filteredProducts: IProduct[] = this.filter ? this.filterData(this.filter) : this.products;
   errorMsg: string;
   constructor(private ps: ProductsService) { 
-    ps.getProducts().subscribe(
-      products => this.products = products,
-      error => this.errorMsg = <any>error
-    );
-    //this.products = ps.getProducts();
+    // ps.getProducts().subscribe(
+    //   products => this.products = products,
+    //   error => this.errorMsg = <any>error
+    // );
+    this.products = ps.getProducts();
   }
 
   filterData(filter: string): IProduct[] {
