@@ -1,12 +1,28 @@
-<form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup);">
-    <div formGroupName="addresses">
-      <div *ngFor="let address of addresses; let i = index">
-        <div formGroupName="{{'address-'+i}}">
-          <input type="text" formControlName="address"/>
-          <input type="text" formControlName="name"/>
-          <input type="text" formControlName="city"/>
+<div class="row">
+  <div class="container">
+    <h1>Edit address info</h1>
+    <button class="btn btn-success" (click)="add()">Add</button>
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup);">
+      <div formGroupName="addresses">
+        <div *ngFor="let address of addresses; let i = index">
+          <div class="form-group row">
+            <div class="col-sm-1-12">
+              <div class="form-group">
+                <div formGroupName="{{'address-'+i}}">
+                  <label for="address" class="col-sm-1-12 col-form-label">Address</label>
+                  <input type="text" formControlName="address" class="form-control" />
+                  <label for="name" class="col-sm-1-12 col-form-label">Name</label>
+                  <input type="text" formControlName="name" class="form-control" />
+                  <label for="city" class="col-sm-1-12 col-form-label">City</label>
+                  <input type="text" formControlName="city" class="form-control" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr> 
         </div>
       </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

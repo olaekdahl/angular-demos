@@ -21,9 +21,9 @@ export class FormsModelComponent implements OnInit {
       city: 'Los Angeles'
     },
     {
-      address: '45 Shady Tree',
-      name: 'Tim',
-      city: 'Los Angeles'
+      address: '152 West 12th st',
+      name: 'Fred',
+      city: 'Seattle'
     }
   ];
 
@@ -46,6 +46,15 @@ export class FormsModelComponent implements OnInit {
 
     this.formGroup.addControl('addresses', addressGroup);
   }
+
+  add() {
+    this.addresses.push({
+        address: '10 Shady Oaks',
+        name: 'Mary',
+        city: 'Dallas'
+      });
+      this.ngOnInit();
+  } 
 
   onSubmit(formGroup) {
     console.log(JSON.stringify(formGroup.value, null, 2));

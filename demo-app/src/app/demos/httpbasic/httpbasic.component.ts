@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpbasicService } from '../httpbasic.service';
-import { IProduct } from '../demos/structural/product';
+import { IProduct } from '../structural/product';
+import { HttpbasicService } from '../../httpbasic.service';
 
 @Component({
   selector: 'app-httpbasic',

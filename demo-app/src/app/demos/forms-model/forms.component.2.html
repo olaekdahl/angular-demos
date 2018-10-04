@@ -10,7 +10,7 @@
     <span *ngIf="userInfo.controls.lastName.touched">was touched
     </span>
     <br/>
-    <span>The value of the form is {{ userInfo.value }}</span>
+    <span>The value of the form is {{ userInfo.value | json }}</span>
     <br />
     <span>The value of firstName is {{ userInfo.controls.firstName.value }}</span>
     <br />
@@ -27,6 +27,7 @@
         <label for="lastName" class="col-sm-1-12 col-form-label">Last Name&nbsp;</label>
         <div class="col-sm-1-12">
           <input type="text" class="form-control" formControlName="lastName" id="lastName">
+          <span *ngIf="userInfo.controls.lastName.valid">lastname is valid</span>
         </div>
       </div>
       <div class="form-group row">

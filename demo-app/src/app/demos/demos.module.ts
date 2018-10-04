@@ -16,6 +16,8 @@ import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { RestClientComponent } from './rest-client/rest-client.component';
 import { ChatclientComponent } from './chatclient/chatclient.component';
 import { FooComponent } from './foo/foo.component';
+import { HttpParallelComponent } from './http-parallel/http-parallel.component';
+import { HttpbasicComponent} from './httpbasic/httpbasic.component';
 
 @NgModule({
   imports: [
@@ -37,7 +39,9 @@ import { FooComponent } from './foo/foo.component';
     DetailComponent,
     RestClientComponent,
     ChatclientComponent,
-    FooComponent
+    FooComponent,
+    HttpbasicComponent,
+    HttpParallelComponent
   ],
   exports: [
     LoginComponent,
@@ -51,7 +55,9 @@ import { FooComponent } from './foo/foo.component';
     PopularPipe,
     DetailComponent,
     RestClientComponent,
-    ChatclientComponent
+    ChatclientComponent,
+    HttpbasicComponent,
+    HttpParallelComponent
   ]
 })
 export class DemosModule { }
