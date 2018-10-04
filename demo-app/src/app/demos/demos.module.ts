@@ -18,6 +18,8 @@ import { ChatclientComponent } from './chatclient/chatclient.component';
 import { FooComponent } from './foo/foo.component';
 import { HttpParallelComponent } from './http-parallel/http-parallel.component';
 import { HttpbasicComponent} from './httpbasic/httpbasic.component';
+import { HttpbasicService } from '../services/httpbasic.service';
+import { SuperBasicHttpComponent } from './super-basic-http/super-basic-http.component';
 
 @NgModule({
   imports: [
@@ -41,7 +43,8 @@ import { HttpbasicComponent} from './httpbasic/httpbasic.component';
     ChatclientComponent,
     FooComponent,
     HttpbasicComponent,
-    HttpParallelComponent
+    HttpParallelComponent,
+    SuperBasicHttpComponent
   ],
   exports: [
     LoginComponent,
@@ -57,7 +60,8 @@ import { HttpbasicComponent} from './httpbasic/httpbasic.component';
     RestClientComponent,
     ChatclientComponent,
     HttpbasicComponent,
-    HttpParallelComponent
+    HttpParallelComponent,
+    SuperBasicHttpComponent
   ]
 })
 export class DemosModule { }

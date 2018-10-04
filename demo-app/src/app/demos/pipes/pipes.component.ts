@@ -21,10 +21,6 @@ export class PipesComponent implements OnInit {
   }
   errorMsg: string;
   constructor(private ps: ProductsService) { 
-    // ps.getProducts().subscribe(
-    //   products => this.products = products,
-    //   error => this.errorMsg = <any>error
-    // );
     this.products = ps.getProducts();
   }
 

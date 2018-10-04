@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'popular'
+  //pure: true
 })
 export class PopularPipe implements PipeTransform {
 

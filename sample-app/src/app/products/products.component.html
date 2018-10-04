@@ -1,0 +1,66 @@
+<button (click)="click()">show/hide message</button><br />
+
+<div *ngIf="showMessage">this is some message</div><br />
+
+<div *ngIf="products else loading">
+  <table *ngIf="products && products.length">
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Price</td>
+      <td></td>
+    </tr>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td><button (click)="delete(product)">Delete</button></td>
+    </tr>
+  </table>
+</div>
+<ng-template #loading>
+  <div>Getting products...</div>
+</ng-template>
+
+<!-- <div [ngSwitch]="selectedPage">
+  <p *ngSwitchCase="1">Page - 1</p>
+  <p *ngSwitchCase="2">Page - 2</p>
+  <p *ngSwitchCase="3">Page - 3</p>
+  <p *ngSwitchCase="4">Page - 4</p>
+  <p *ngSwitchDefault>Page not found...</p>
+  <button (click)="next()">Next</button>
+</div> -->
+
+<ng-template #case1>
+    <div>Page - 2</div>
+  </ng-template>
+
+<ng-template #case2>
+  <div>Page - 2</div>
+</ng-template>
+
+<ng-template #case3>
+  <div>Page - 3</div>
+</ng-template>
+
+<ng-template #case4>
+  <div>Page - 4</div>
+</ng-template>
+
+
+<div [ngSwitch]="selectedPage">
+  <p *ngSwitchCase="1">
+    <ng-container *ngTemplateOutlet="case1"></ng-container>
+  </p>
+  <p *ngSwitchCase="2">
+    <ng-container *ngTemplateOutlet="case2"></ng-container>
+  </p>
+  <p *ngSwitchCase="3">
+    <ng-container *ngTemplateOutlet="case3"></ng-container>
+  </p>
+  <p *ngSwitchCase="4">
+    <ng-container *ngTemplateOutlet="case4"></ng-container>
+  </p>
+  <p *ngSwitchDefault>Page not found...</p>
+  <button (click)="next()">Next</button>
+</div>

@@ -13,11 +13,14 @@
     <tbody>
       <tr *ngFor="let product of products">
         <td><a href="#" [routerLink]="['/products', product.productId]">{{ product.productId }}</a></td>
-        <td>{{ product.productName | lowercase }}</td>
+        <!-- <td>{{ product.productName | lowercase}}</td> -->
+        <td>{{ product.productName | uppercase }}</td>
         <!-- code | symbol | symbol-narrow -->
+        <!-- <td>{{ product.price | currency:"USD":"symbol":"1.2-2" }}</td> -->
         <td>{{ product.price | currency:"USD":"symbol":"1.2-2" }}</td>
         <!-- <td>{{ product.stockDate | date:"MM-dd-yyyy" }}</td> -->
-        <td>{{ product.stockDate | date:"MM-dd-yyyy" }}</td>
+        <td>{{ product.stockDate | date:"MMMM dd, yyyy" }}</td>
+        <!-- <td><div [innerHtml]="product.popular | popular:product.productName"></div></td> -->
         <td><div [innerHtml]="product.popular | popular:product.productName"></div></td>
       </tr>
     </tbody>

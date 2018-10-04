@@ -1,0 +1,21 @@
+
+<label [style.color]="isRed ?'red':'blue'">Today: {{today | date:'MM/dd/yy'}}</label><br/>
+<app-alert [msg]="statusText" (readEvent)="onRead($event)"></app-alert><br/>
+{{msg}} <br/>
+<label>Please login!</label>
+<table>
+  <tr>
+    <td><label>User: </label></td>
+    <td><input placeholder="Enter username" type="text" [(ngModel)]="username" [disabled]="isDisabled"/></td>
+  </tr>
+  <tr>
+    <td><label>Password: </label></td>
+    <td><input placeholder="Enter password" type="password" [(ngModel)]="password" [disabled]="isDisabled" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><button (click)="onClick()">Login</button></td>
+  </tr>
+</table>
+<!-- <ng-dropdown [data]="domains" dTitle="Domain" [(selectedOption)]="domainOption" [filter]="true"></ng-dropdown>
+
+{{domainOption | json}} -->

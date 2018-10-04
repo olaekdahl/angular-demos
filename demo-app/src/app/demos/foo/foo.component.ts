@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpbasicService } from '../../httpbasic.service';
+import { HttpbasicService } from '../../services/httpbasic.service';
 
 @Component({
   selector: 'app-foo',
