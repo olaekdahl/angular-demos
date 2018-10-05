@@ -16,5 +16,5 @@
   </label>
 </div>
   <button type="submit"
-          [disabled]="!contactForm.valid" class="btn btn-success">Save</button>
+          [disabled]="!contactForm.valid" (click)="onSubmit()" class="btn btn-success">Save</button>
 </form>

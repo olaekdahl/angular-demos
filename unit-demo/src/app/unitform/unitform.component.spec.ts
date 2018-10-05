@@ -39,20 +39,20 @@ describe('UnitformComponent', () => {
 
   it(`form should be valid`, async(() => {
     comp.contactForm.controls['email'].setValue('asd@test.com');
-    comp.contactForm.controls['name'].setValue('aada');
+    comp.contactForm.controls['name'].setValue('aadaaaaaaa');
     comp.contactForm.controls['text'].setValue('text');
     expect(comp.contactForm.valid).toBeTruthy();
   }));
 
-  // it(`should call the onSubmit method`, async(() => {
-  //   spyOn(comp, 'onSubmit');
-  //   // let button : DebugElement =
-  //   //   fixture.debugElement.query(By.css("button"));
+  it(`should call the onSubmit method`, async(() => {
+    spyOn(comp, 'onSubmit');
+    // let button : DebugElement =
+    //   fixture.debugElement.query(By.css("button"));
 
-  //   // button.triggerEventHandler("onSubmit", null);
-  //   // fixture.detectChanges();
-  //   el = fixture.debugElement.query(By.css('button')).nativeElement;
-  //   el.click();
-  //   expect(comp.onSubmit).toHaveBeenCalled();
-  // }));
+    // button.triggerEventHandler("onSubmit", null);
+    // fixture.detectChanges();
+    el = fixture.debugElement.query(By.css('button')).nativeElement;
+    el.click();
+    expect(comp.onSubmit).toHaveBeenCalled();
+  }));
 });

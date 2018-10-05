@@ -7,7 +7,7 @@ export class BlogserviceService {
 
   constructor() { }
 
-  getBlog(): string {
-    return 'blah blah blah...';
+  getBlog(id:number): string {
+    return `/blogs/angular/${id}`;
   }
 }

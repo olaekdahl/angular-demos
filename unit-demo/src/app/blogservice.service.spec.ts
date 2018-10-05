@@ -12,4 +12,8 @@ describe('BlogserviceService', () => {
   it('should be created', inject([BlogserviceService], (service: BlogserviceService) => {
     expect(service).toBeTruthy();
   }));
+
+  it('should be created', inject([BlogserviceService], (service: BlogserviceService) => {
+    expect(service.getBlog(1)).toBe('/blogs/angular/1');
+  }));
 });

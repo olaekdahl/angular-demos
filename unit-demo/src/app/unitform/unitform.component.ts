@@ -26,7 +26,7 @@ export class UnitformComponent {
         this.contactForm = new FormGroup({
             'name': new FormControl(this.contact.name, [
                 Validators.required,
-                Validators.minLength(4)
+                Validators.minLength(10)
             ]),
             'email': new FormControl(this.contact.email, [
                 Validators.required,
