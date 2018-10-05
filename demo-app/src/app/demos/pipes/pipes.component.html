@@ -1,4 +1,4 @@
-<input [(ngModel)]="filter" type="text"/>
+<input (blur)="addData()" [(ngModel)]="data" type="text"/> <button (click)="addData()">Add</button>
 
 <table class="table table-striped col-md-7">
     <thead>
