@@ -1,6 +1,6 @@
 import { Component, HostBinding } from '@angular/core';
 import { style, animate, transition, state, trigger } from '@angular/animations';
-import { Animations } from './animations'
+import { Animations } from './shared/animations'
 
 @Component({
   selector: 'app-root',

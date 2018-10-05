@@ -1,6 +1,6 @@
 import { Component, OnInit, Optional } from '@angular/core';
-import { ProductsService } from '../products.service';
 import { IProduct } from '../structural/product';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-di-demo',

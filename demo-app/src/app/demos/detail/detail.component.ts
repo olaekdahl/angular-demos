@@ -1,6 +1,6 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Animations } from '../../animations';
+import { Animations } from '../../shared/animations';
 
 @Component({
   selector: 'app-detail',

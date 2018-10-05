@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 
+import { PopularPipe } from './shared/popular.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FormsModule,
     AppRoutingModule,
     //CheckoutModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    PopularPipe
   ],
   providers: [],
   bootstrap: [AppComponent]

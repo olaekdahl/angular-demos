@@ -1,7 +1,7 @@
 import { Component, OnInit, LOCALE_ID, HostBinding } from '@angular/core';
-import { ProductsService } from '../products.service';
+import { ProductsService } from '../../services/products.service';
 import { IProduct } from '../structural/product';
-import { Animations } from '../../animations';
+import { Animations } from '../../shared/animations';
 
 @Component({
   selector: 'app-pipes',

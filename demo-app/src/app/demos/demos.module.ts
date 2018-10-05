@@ -7,10 +7,8 @@ import { StructuralComponent } from './structural/structural.component';
 import { FormsTemplateComponent } from './forms-template/forms.component';
 import { FormsModelComponent } from './forms-model/forms.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ProductsService } from './products.service';
 import { DiDemoComponent } from './di-demo/di-demo.component';
 import { PipesComponent } from './pipes/pipes.component';
-import { PopularPipe } from './popular.pipe';
 import { DetailComponent } from './detail/detail.component';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { RestClientComponent } from './rest-client/rest-client.component';
@@ -37,7 +35,6 @@ import { SuperBasicHttpComponent } from './super-basic-http/super-basic-http.com
     FormsModelComponent,
     DiDemoComponent,
     PipesComponent,
-    PopularPipe,
     DetailComponent,
     RestClientComponent,
     ChatclientComponent,
@@ -55,7 +52,6 @@ import { SuperBasicHttpComponent } from './super-basic-http/super-basic-http.com
     FormsModelComponent,
     DiDemoComponent,
     PipesComponent,
-    PopularPipe,
     DetailComponent,
     RestClientComponent,
     ChatclientComponent,
