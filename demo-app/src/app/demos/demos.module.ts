@@ -18,6 +18,7 @@ import { HttpParallelComponent } from './http-parallel/http-parallel.component';
 import { HttpbasicComponent} from './httpbasic/httpbasic.component';
 import { HttpbasicService } from '../services/httpbasic.service';
 import { SuperBasicHttpComponent } from './super-basic-http/super-basic-http.component';
+import { PopularPipe } from '../shared/popular.pipe';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import { SuperBasicHttpComponent } from './super-basic-http/super-basic-http.com
     FooComponent,
     HttpbasicComponent,
     HttpParallelComponent,
-    SuperBasicHttpComponent
+    SuperBasicHttpComponent,
+    PopularPipe
   ],
   exports: [
     LoginComponent,
