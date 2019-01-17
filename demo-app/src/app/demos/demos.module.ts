@@ -19,6 +19,7 @@ import { HttpbasicComponent} from './httpbasic/httpbasic.component';
 import { HttpbasicService } from '../services/httpbasic.service';
 import { SuperBasicHttpComponent } from './super-basic-http/super-basic-http.component';
 import { PopularPipe } from '../shared/popular.pipe';
+import { ObsComponent } from './obs/obs.component';
 
 @NgModule({
   imports: [
@@ -43,7 +44,8 @@ import { PopularPipe } from '../shared/popular.pipe';
     HttpbasicComponent,
     HttpParallelComponent,
     SuperBasicHttpComponent,
-    PopularPipe
+    PopularPipe,
+    ObsComponent
   ],
   exports: [
     LoginComponent,
@@ -59,7 +61,8 @@ import { PopularPipe } from '../shared/popular.pipe';
     ChatclientComponent,
     HttpbasicComponent,
     HttpParallelComponent,
-    SuperBasicHttpComponent
+    SuperBasicHttpComponent,
+    ObsComponent
   ]
 })
 export class DemosModule { }
