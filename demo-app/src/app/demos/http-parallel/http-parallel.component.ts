@@ -22,8 +22,8 @@ export class HttpParallelComponent implements OnInit {
     this.personData = this.http.get(this.personURL);
     this.planetData = this.http.get(this.planetURL);
     zip(this.personData, this.planetData).subscribe(([person, planet]) => {
-      this.data = JSON.stringify(person);
-      this.data += JSON.stringify(planet);
+      this.data = person;
+      this.data += planet;
       //console.log(person);
       // console.log(planet);
     });
