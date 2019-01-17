@@ -15,7 +15,7 @@ export class ObsComponent implements OnInit {
 
   ngOnInit() {
     //create simple observable
-     let numbers$ = of(1, 2, 3);
+    let numbers$ = of(1, 2, 3);
     //let numbers$ = of('Hello');
     numbers$.subscribe((data) => {
       console.log(data);
@@ -36,10 +36,14 @@ export class ObsComponent implements OnInit {
       map(data => `The value is ${data}`)
     );
 
-    
-    pipeFunc.subscribe((data) => {
-      console.log(data);
-    });
-    
+
+    pipeFunc.subscribe(
+      data => {
+        console.log(data);
+      },
+      err => {
+        console.log(err)
+      });
+
   }
 }
