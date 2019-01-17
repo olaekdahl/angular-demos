@@ -11,7 +11,9 @@ export class ObsComponent implements OnInit {
 
   constructor() { }
 
+  cahceList: number[];
 
+  //return of(cacheList)
 
   ngOnInit() {
     //create simple observable
