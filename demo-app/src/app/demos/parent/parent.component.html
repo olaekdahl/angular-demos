@@ -1,0 +1,7 @@
+<p>Parent Comonent</p>
+<div><input type="text" [(ngModel)]="parentState" /></div>
+<div><b>Data from child:</b> {{ childState }}</div>
+<p>-----------------------------------------------------------------------------------</p>
+
+<app-child [input]="parentState" (output)="onValueChange($event)"></app-child>
+

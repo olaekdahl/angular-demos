@@ -19,11 +19,6 @@ export class FormsModelComponent implements OnInit {
       address: '45 Shady Tree',
       name: 'Tim',
       city: 'Los Angeles'
-    },
-    {
-      address: '152 West 12th st',
-      name: 'Fred',
-      city: 'Seattle'
     }
   ];
 

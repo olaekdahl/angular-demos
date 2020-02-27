@@ -7,12 +7,12 @@ import { StateService } from '../../services/state.service';
 @Component({
   selector: 'app-pipes',
   templateUrl: './pipes.component.html',
-  styleUrls: ['./pipes.component.css'],
-  animations: [Animations.page]
+  styleUrls: ['./pipes.component.css']
+  //,animations: [Animations.page]
 })
 export class PipesComponent implements OnInit {
-  @HostBinding('@routeAnimation')
-  anyProperty = 'anything';
+  // @HostBinding('@routeAnimation')
+  // anyProperty = 'anything';
   
   products: IProduct[];
 

@@ -1,5 +1,6 @@
 <div class="row">
   <div class="container">
+    <p *ngIf="userName.invalid">Please enter a valid name</p>
     <!-- <form #userInfo="ngForm" (ngSubmit)="onSubmit(userInfo);" [ngFormOptions]="{ updateOn: 'submit' }">
        -->
     <form #userInfo="ngForm" (ngSubmit)="onSubmit(userInfo);">
@@ -17,9 +18,9 @@
         <br/>
       <div class="form-group row">
         <div class="col-sm-1-12">
-          <p *ngIf="userName.invalid">Please enter a valid name</p>
+          
           <label for="name" class="col-sm-1-12 col-form-label" required>Name</label>
-          <input type="text" required maxlength="5" [(ngModel)]="person.name" class="form-control" name="name" id="name"
+          <input type="number" required [pattern]="banana" [(ngModel)]="person.name" class="form-control" name="name" id="name"
             placeholder=""
             #userName="ngModel">
         </div>
