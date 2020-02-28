@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ChatclientComponent } from './chatclient.component';
+import { FormsModule } from '@angular/forms';
 
 describe('ChatclientComponent', () => {
   let component: ChatclientComponent;
@@ -8,7 +9,8 @@ describe('ChatclientComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChatclientComponent ]
+      declarations: [ ChatclientComponent ],
+      imports:[FormsModule]
     })
     .compileComponents();
   }));

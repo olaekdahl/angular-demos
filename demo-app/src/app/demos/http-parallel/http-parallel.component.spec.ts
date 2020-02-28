@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HttpParallelComponent } from './http-parallel.component';
+import { HttpClient } from '@angular/common/http';
 
 describe('HttpParallelComponent', () => {
   let component: HttpParallelComponent;
@@ -8,7 +9,8 @@ describe('HttpParallelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HttpParallelComponent ]
+      declarations: [ HttpParallelComponent ],
+      imports:[ HttpClientTestingModule ]
     })
     .compileComponents();
   }));

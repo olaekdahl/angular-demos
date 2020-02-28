@@ -68,7 +68,8 @@ import { ParentComponent } from './parent/parent.component';
     SuperBasicHttpComponent,
     ObsComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    HttpbasicService
   ]
 })
 export class DemosModule { }

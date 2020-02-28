@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { FooComponent } from './foo.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('FooComponent', () => {
   let component: FooComponent;
@@ -8,7 +9,8 @@ describe('FooComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FooComponent ]
+      declarations: [ FooComponent ],
+      imports:[HttpClientTestingModule]
     })
     .compileComponents();
   }));
@@ -22,4 +24,9 @@ describe('FooComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('add', () =>{
+    expect(2+2).toBe(4);
+  })
+
 });
