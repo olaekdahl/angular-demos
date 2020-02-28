@@ -23,7 +23,7 @@ export class HttpParallelComponent implements OnInit {
     this.planetData = this.http.get(this.planetURL);
     zip(this.personData, this.planetData).subscribe(([person, planet]) => {
       this.data = person;
-      this.data += planet;
+      // this.data += planet;
       //console.log(person);
       // console.log(planet);
     });

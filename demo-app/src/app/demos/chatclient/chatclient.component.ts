@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from '../../services/chat.service';
 
+// node app.js to start server on port 5000.
 
 @Component({
   selector: 'app-chatclient',
