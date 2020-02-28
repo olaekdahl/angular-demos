@@ -1,5 +1,6 @@
 <p>
-  chatclient: {{ message | json }}
+  chatclient (rawMessage): {{ rawMessage | json }} <br />
+  chatclient (message): {{ message }}
 </p>
 <form #postData="ngForm" (ngSubmit)="onSubmit(postData);">
   <input type="text" [(ngModel)]="data" class="form-control" name="data" id="data">

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatService } from '../../services/chat.service';
+import { ThrowStmt } from '@angular/compiler';
 
 // node app.js to start server on port 5000.
 
@@ -12,12 +13,16 @@ export class ChatclientComponent implements OnInit{
   title = 'app';
   data;
   message: string;
+  rawMessage: string;
   constructor(private chat: ChatService){ }
 
   ngOnInit() {
     this.chat.messages.subscribe(msg => {
-      this.message = msg,
-      console.log(msg);
+      if(msg != undefined) {
+        this.rawMessage = msg;
+        this.message = JSON.parse(msg.text).data,
+        console.log(msg);
+      }
     })
   }
 
