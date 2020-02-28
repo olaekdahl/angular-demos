@@ -8,9 +8,7 @@ import { Observable } from 'rxjs';
 export class ProuctDetailGuard implements CanActivate {
 constructor(private router: Router) {}
 
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+  canActivate(next: ActivatedRouteSnapshot): Observable<boolean> | Promise<boolean> | boolean {
       const pid = +next.url[1].path;
       if(isNaN(pid) || pid < 1) {
         alert('Product id not found!');

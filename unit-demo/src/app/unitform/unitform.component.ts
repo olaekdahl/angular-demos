@@ -1,6 +1,6 @@
 // https://github.com/SantiagoGdaR/angular4-unit-test
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -8,7 +8,14 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './unitform.component.html',
   styleUrls: ['./unitform.component.css']
 })
-export class UnitformComponent {
+export class UnitformComponent implements OnInit {
+    constructor() {
+        this.createForm();
+    }
+
+    ngOnInit(): void {
+        
+    }
     text = 'contact page';
     contactForm: FormGroup;
     contact = {
@@ -18,15 +25,13 @@ export class UnitformComponent {
     };
     submitted = false;
 
-    constructor() {
-        this.createForm();
-    }
+  
 
     createForm(): void {
         this.contactForm = new FormGroup({
             'name': new FormControl(this.contact.name, [
                 Validators.required,
-                Validators.minLength(10)
+                Validators.minLength(5)
             ]),
             'email': new FormControl(this.contact.email, [
                 Validators.required,

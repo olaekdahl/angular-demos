@@ -25,8 +25,7 @@ describe('FooComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('add', () =>{
-    expect(2+2).toBe(4);
-  })
-
+  it('test test function', () => {
+    expect(component.test(2,2)).toBe(4);
+  });
 });

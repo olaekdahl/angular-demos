@@ -14,4 +14,8 @@ export class FooComponent implements OnInit {
     this.http.getData().subscribe(data => console.log(data));
   }
 
+  test(a:number,b:number):number {
+    return a+b;
+  }
+
 }

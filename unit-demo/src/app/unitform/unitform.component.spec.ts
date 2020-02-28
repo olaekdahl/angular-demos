@@ -20,7 +20,7 @@ describe('UnitformComponent', () => {
       ],
       imports: [
         BrowserModule,
-        FormsModule,
+        //FormsModule,
         ReactiveFormsModule
       ]
     }).compileComponents().then(() => {
@@ -51,8 +51,8 @@ describe('UnitformComponent', () => {
 
     // button.triggerEventHandler("onSubmit", null);
     // fixture.detectChanges();
-    el = fixture.debugElement.query(By.css('button')).nativeElement;
-    el.click();
+    // el = fixture.debugElement.query(By.css('button')).nativeElement;
+    // el.click();
     expect(comp.onSubmit).toHaveBeenCalled();
   }));
 });
